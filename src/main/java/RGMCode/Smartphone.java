@@ -1,6 +1,5 @@
 package RGMCode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Smartphone extends Contact implements Radio, GPS {
@@ -22,6 +21,10 @@ public class Smartphone extends Contact implements Radio, GPS {
         this.model = model;
         this.hersteller = hersteller;
         this.contacts = contacts;
+    }
+
+    public Smartphone() {
+
     }
 
     public boolean startRadio(){
@@ -72,4 +75,5 @@ public class Smartphone extends Contact implements Radio, GPS {
                 ", contacts=" + Arrays.toString(contacts) +
                 "} " + super.toString();
     }
+
 }

@@ -7,29 +7,54 @@ import static org.junit.jupiter.api.Assertions.*;
 class SmartphoneTest {
 
     @Test
-    void startRadio() {
+    void startRadioTrue() {
         //given
+        Smartphone iphone = new Smartphone();
+        //boolean exp = true;
         //when
-
+        boolean act = iphone.startRadio();
         //then
-        assertTrue(true);
+        assertTrue(act);
     }
 
     @Test
-    void stopRadio() {
+    void startRadioFalse() {
         //given
+        Smartphone iphone = new Smartphone();
+        //boolean exp = true;
         //when
-
+        boolean act = iphone.stopRadio();
         //then
-        assertTrue(true);
+        assertFalse(act);
+    }
+
+    @Test
+    void stopRadioTrue() {
+        //given
+        Smartphone iphone = new Smartphone();
+        //when
+        boolean act = iphone.stopRadio();
+        //then
+        assertFalse(act);
+    }
+
+    @Test
+    void stopRadioFalse() {
+        //given
+        Smartphone iphone = new Smartphone();
+        //when
+        boolean act = iphone.stopRadio();
+        //then
+        assertFalse(act);
     }
 
     @Test
     void getPosition() {
         //given
+        Smartphone cords = new Smartphone();
         String expectet = "Köln";
         //when
-        String actual = "";
+        String actual = cords.getPosition();
         //then
         assertEquals(expectet,actual);
     }
